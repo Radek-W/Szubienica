@@ -87,7 +87,8 @@ if(trafiona == true){
 
     // Warunek wygranej
     if(haslo == haslo1){
-        document.getElementById("alfabet").innerHTML = 'Wygrałeś!'
+        document.getElementById("alfabet").removeAttribute("onclick");
+        document.getElementById("alfabet").innerHTML = 'Wygrałeś! <br><br> <span style="cursor:pointer; font-weight:bold; color:#00C000;" onclick="location.reload()">ZAGRAJ JESZCZE RAZ</span>';
     }
 } else {
     //zla litera
@@ -105,6 +106,6 @@ if(trafiona == true){
 
     //warunek przegranej
 }   if(skuchy >=9){
-    document.getElementById("alfabet").innerHTML = 'Przegrałeś. Hasło:<br>' + haslo;
+    document.getElementById("alfabet").innerHTML = 'Przegrałeś. Hasło:<br>' + haslo + '<br><br><span style="cursor:pointer; font-weight:bold; color:#C00000;" onclick="location.reload()">ZAGRAJ JESZCZE RAZ</span>';
 }
 };
